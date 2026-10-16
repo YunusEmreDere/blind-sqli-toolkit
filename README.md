@@ -22,4 +22,12 @@ Pozisyon: 1 : g , Şu ana kadarki şifre: g <br>
 Pozisyon: 2 : 7 , Şu ana kadarki şifre: g7 <br>
 Pozisyon: 3 : 3 , Şu ana kadarki şifre: g73 <br>
 ... <br>
-Test tamamlandı!!! Şifre: g73chyfwwjcc4xnnu8y8
+Test tamamlandı!!! Şifre: g73chyfwwjcc4xnnu8y8 <br>
+
+
+
+## Planlanan geliştirmeler
+
+- [ ] Binary search ile istek sayısını azaltma
+- [ ] Time-based blind SQLi desteği
+- [ ] PostgreSQL / MySQL desteği
