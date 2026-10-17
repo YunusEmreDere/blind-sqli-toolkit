@@ -3,6 +3,10 @@ Blind SQL injection zafiyetlerini, karakter karakter veri çıkararak (brute-for
 
 ## exploit.py
 PortSwigger Web Security Academy'deki `Blind SQL injection with conditional errors` labının çözüm scripti.<br>
+
+## exploit_binary_search.py
+`exploit.py` ile aynı lab'ı çözüyor, ama karakterleri tek tek denemek yerine binary search kullanıyor. Pozisyon başına ortalama 36 istek yerine ~6-7 istek atıyor. Ayrıca bulunan her karakteri bir doğrulama adımıyla kontrol edip, yanlış çıkarsa o pozisyonu otomatik tekrar deniyor (ağ kaynaklı tutarsız cevaplara karşı).
+
 **Veritabanı:** Oracle <br>
 **Teknik:** Error-based blind SQL injection — `TrackingId` cookie'sine enjekte edilen bir `CASE WHEN` ifadesi, koşul doğru olduğunda `TO_CHAR(1/0)` ile sıfıra bölme hatası tetikliyor (HTTP 500), yanlışsa normal cevap (200) dönüyor. Script, `administrator` kullanıcısının şifresini bu davranış farkına bakarak pozisyon pozisyon, a-z ve 0-9 karakterlerini deneyerek buluyor.
 ## Çalıştırma
@@ -28,6 +32,6 @@ Test tamamlandı!!! Şifre: g73chyfwwjcc4xnnu8y8 <br>
 
 ## Planlanan geliştirmeler
 
-- [ ] Binary search ile istek sayısını azaltma
+- [x] Binary search ile istek sayısını azaltma
 - [ ] Time-based blind SQLi desteği
 - [ ] PostgreSQL / MySQL desteği
